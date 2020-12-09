@@ -41,7 +41,7 @@ body{
 
 .output {
     grid-column: 1 / -1;
-    background-color: #F1AB86;
+    background-color: #251605;
     display: flex;
     align-items: flex-end;
     justify-content: space-around;
@@ -49,4 +49,14 @@ body{
     padding: 10ox;
     word-wrap: break-word;
     word-break: break-all;
+}
+
+.output .previous-operand {
+    color: #f1ab86;
+    font-size: 1.5rem;
+}
+
+.output .current-operand {
+    color: #f7dba7;
+    font-size: 2.5rem;
 }
