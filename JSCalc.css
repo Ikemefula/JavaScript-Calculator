@@ -26,7 +26,7 @@ body{
 .calculator-grid > button {
     cursor: pointer;
     font-size: 2rem;
-    border: 1px solid white;
+    border: 1px solid #f7dba7;
     outline: none;
     background-color: rgba(255, 255, 255, .75);
     }
@@ -41,7 +41,7 @@ body{
 
 .output {
     grid-column: 1 / -1;
-    background-color: #251605;
+    background-color: #c57b57;
     display: flex;
     align-items: flex-end;
     justify-content: space-around;
