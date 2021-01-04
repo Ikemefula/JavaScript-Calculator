@@ -2,24 +2,24 @@ class Calculator {
   constructor(previousOperandTextElement, currentOperandTextElement) {
     this.previousOperandTextElement = previousOperandTextElement
     this.currentOperandTextElement = currentOperandTextElement
-    this.clear
+    this.clear()
   }
-
+// this function will clear out our different variables
   clear() {
     this.currentOperand = ''
     this.previousOperand = ''
     this.operation = undefined
   }
-
+// this function will remove a single number
   delete() {
 
   }
-
-  appendNumber() {
+// this function is used when a user clicks on a button. it will add a number to the screen 
+  appendNumber(number) {
     if (number === '.' && this.current)
     this.currentOperand = this.currentOperand.toString() + numberButtons.toString()
   }
-
+// 
   chooseOperation(operation) {
     if (this.currentOperand === '') return
     if (this.previousOperand !== '') {
