@@ -4,34 +4,34 @@ class Calculator {
     this.currentOperandTextElement = currentOperandTextElement
     this.clear()
   }
-// this function will clear out our different variables
+  // this function will clear out our different variables
   clear() {
     this.currentOperand = ''
     this.previousOperand = ''
     this.operation = undefined
   }
-// this function will remove a single number
+  // this function will remove a single number
   delete() {
 
   }
-// this function is used when a user clicks on a button. it will add a number to the screen 
+  // this function is used when a user clicks on a button. it will add a number to the screen 
   appendNumber(number) {
     if (number === '.' && this.current)
-    this.currentOperand = this.currentOperand.toString() + numberButtons.toString()
+      this.currentOperand = this.currentOperand.toString() + numberButtons.toString()
   }
-// 
+  // 
   chooseOperation(operation) {
     if (this.currentOperand === '') return
     if (this.previousOperand !== '') {
-      this.compute()     
+      this.compute()
     }
     this.operation = operation
-    this.previousOperand = this.currentOperand 
+    this.previousOperand = this.currentOperand
     this.currentOperand = ''
 
   }
 
-  compute () {
+  compute() {
     let computation
     const prev = parseFloat(this.previousOperand)
     const current = parseFloat(this.currentOperand)
@@ -48,7 +48,7 @@ class Calculator {
   updateDisplay() {
     this.currentOperandTextElement.innerText = this.currentOperand
     this.previousOperandTextElement.innerText = this.previousOperand
-    
+
   }
 }
 
@@ -62,14 +62,14 @@ const previousOperandTextElement = document.querySelector('[data-previous-operan
 const currentOperandTextElement = document.querySelector('[data-previous-operand]')
 
 const calculator = new Calculator(previousOperandTextElement, currentOperandTextElement)
- 
+
 numberButtons.forEach(button => {
   button.addEventListener('click', () => {
     calculator.appendNumber(button.innerText)
     calculator.updateDisplay()
   })
 })
- 
+
 operationButtons.forEach(button => {
   button.addEventListener('click', () => {
     calculator.chooseOperation(button.innerText)
@@ -81,11 +81,6 @@ equalsButton.addEventListener('click', button => {
   calculator.compute()
   calculator.updateDisplay()
 })
-
-
-
-
-
 
 
 
