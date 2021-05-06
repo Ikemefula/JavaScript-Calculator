@@ -5,6 +5,35 @@
   // data-delete
   // data-equals
   // data-previous-operand
+
+class Calculator {
+  constructor(previousOperandTextElement, currentOperandTextElement) {
+    this.previousOperandTextElement = previousOperandTextElement
+    this.currentOperandTextElement = currentOperandTextElement
+  }
+  clear() {
+// clear out diff variables 
+  }
+  delete() {
+// remove a single nuimber 
+  }
+  appendNumber() {
+// what happens whne smoe adds a number. when user clcks a number  
+  }
+  
+  chooseOperation() {
+// needs to take the operation that the user selected
+  }
+
+  compute() {
+// needs to take our value from inside my cal and compute a single value for what needs to be displayed on calc
+  }
+
+  updateDisplay() {
+// will update our values insire of our output window
+  }
+
+}
   
   
 
